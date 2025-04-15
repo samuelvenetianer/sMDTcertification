@@ -3,12 +3,13 @@ import os
 import numpy as np
 import math
 import matplotlib.pyplot as plt
+from natsort import natsorted
 
 #Specify paths
 
-t0_untitled = r"/net/ustc_01/users/lich/muon/results/Mod1_BIS1C02_CosmicRay_Thr114/T0Fits" #folder with Chihao's T0 fits
-t0_titled = r"/home/svenetia/TEST" #folder to save titled pngs & summary png pages
-summary_folder = r"/home/svenetia/TEST" #folder to save scrollable pdf
+t0_untitled = r"/net/ustc_01/users/lich/muon/results/Mod2_BIS1C04_CosmicRay_Thr114/T0Fits" #folder with Chihao's T0 fits
+t0_titled = r"/home/svenetia/Mod2_Thr114_PostCal" #folder to save titled pngs & summary png pages
+summary_folder = r"/home/svenetia/Mod2_Thr114_PostCal" #folder to save scrollable pdf
 
 widths=[]
 heights=[]
@@ -16,34 +17,50 @@ pngs=[]
 images=[]
 iter=0
 
-#get list of files
-all_files= os.listdir(t0_untitled)
+# #get list of files
+# all_files= os.listdir(t0_untitled)
+
+# #make list of only pngs
+# for i in all_files:
+#     if "TestData" in i:
+#         pngs.append(i)
+
+# print("Adding titles to spectra...")
+
+# #turn all pngs into images
+# for i in pngs:
+#     img=Image.open(t0_untitled+"/"+i)
+
+#     #add title
+#     fig,ax=plt.subplots()
+#     ax.imshow(img)
+#     ax.set_axis_off()
+
+#     #construct new title
+#     throwaway, keep=i.split("TestData_")
+#     keep, throwaway=keep.split("_time_spectrum")
+#     ax.set_title(keep)
+#     full_path=t0_titled+"/"+keep+".png"
+#     plt.savefig(full_path, bbox_inches="tight", dpi=300)
+#     plt.close()
+
+titled=[]
+
+print("Sorting files...")
+#get list of titled files and sort them by name
+titled_files= os.listdir(t0_titled)
 
 #make list of only pngs
-for i in all_files:
-    if "TestData" in i:
-        pngs.append(i)
+for i in titled_files:
+    if "tdc" in i:
+        titled.append(i)
 
-print("Adding titles to spectra...")
+#re-order files
+sorted_files=natsorted(titled)
+print(sorted_files)
 
-#turn all pngs into images
-for i in pngs:
-    img=Image.open(t0_untitled+"/"+i)
-
-    #add title
-    fig,ax=plt.subplots()
-    ax.imshow(img)
-    ax.set_axis_off()
-
-    #construct new title
-    throwaway, keep=i.split("TestData_")
-    keep, throwaway=keep.split("_time_spectrum")
-    ax.set_title(keep)
-    full_path=t0_titled+"/"+keep+".png"
-    plt.savefig(full_path, bbox_inches="tight", dpi=300)
-    plt.close()
-
-    img=Image.open(full_path)
+for i in sorted_files:
+    img=Image.open(t0_titled+"/"+i)
     images.append(img)
     w,h=img.size
     widths.append(w)
@@ -93,6 +110,7 @@ imgs= os.listdir(t0_titled)
 for i in imgs:
     if "summary" in i:
         img_to_cat.append(i)
+img_to_cat=natsorted(img_to_cat)
 
 images = [
     Image.open(t0_titled+"/" + f)
