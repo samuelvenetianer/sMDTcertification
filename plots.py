@@ -5,11 +5,12 @@ import matplotlib.pyplot as plt
 import math
 import seaborn as sns
 from PIL import Image
+import sys
 
 #user inputs
 run_folder=r"/net/ustc_01/users/lich/muon/results"
-run_file="Mod2_BIS1C04_CosmicRay_Thr114.txt"
-output_folder=r"/home/svenetia/Mod2_Thr114_PostCal"
+run_file=sys.argv[1]+".txt"
+output_folder=r"/home/svenetia"+"/"+sys.argv[1]
 
 def summary_hist(input_folder, input_file, save_folder):
     df = pd.read_csv(input_folder+"/"+input_file, delimiter=",")

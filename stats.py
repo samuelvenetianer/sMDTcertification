@@ -1,10 +1,11 @@
 #import required packages
 import pandas as pd
+import sys
 
 #user inputs
 run_folder=r"/net/ustc_01/users/lich/muon/results"
-run_file="Mod2_BIS1C04_CosmicRay_Thr114.txt"
-output_folder=r"/home/svenetia/Mod2_Thr114_PostCal"
+run_file=sys.argv[1]+".txt"
+output_folder=r"/home/svenetia"+"/"+sys.argv[1]
 
 #Choose run of interest
 def calc_stats_txt(input_txt_folder,input_txt_file, output_txt_folder):
