@@ -9,3 +9,6 @@ lsetup "root recommended"<br/>
 3. Create new folder where you want output (i.e. in home directory) with naming scheme: Mod[]_Thr[]_PostCal<br/>
 
 4. In order, run pdf_maker.py, plots.py, stats.py from terminal with syntax: "python pdf_maker.py"
+
+Note:<br/> analysis_functions.ipynb has filtering functions and workshopping material for .py files<br/>
+all_mods_functions.ipynb has functions for creating summary histos of parameters for all modules
