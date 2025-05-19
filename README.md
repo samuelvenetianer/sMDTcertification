@@ -8,4 +8,9 @@ lsetup "root recommended"<br/>
 bash `run_all.sh` Mod[]_BIS[]_CosmicRay_Thr[]
 
 Note:<br/> `analysis_functions.ipynb` has filtering functions and workshopping material for .py files<br/>
-`all_mods_functions.ipynb` has functions for creating summary histos of parameters for all modules
+`all_mods_functions.ipynb` has functions for creating summary histos of parameters for all modules <br/>
+
+Reminder for commiting changes: <br/>
+`git add <file(s)>` <br/>
+`git commit -m "commit message"` <br/>
+`git push origin main` <br/>
