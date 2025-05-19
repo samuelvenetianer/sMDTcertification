@@ -4,11 +4,13 @@ Steps for running certification analysis:
 setupATLAS <br/>
 lsetup "root recommended"<br/>
 
-2. Change all folder paths to relevant modules in pdf_maker.py, plots.py, stats.py<br/>
+2. Run `run_all.sh` to create pdf of individual spectra, histograms, heatmaps, and stats output: <br/>
+bash `run_all.sh` Mod[]_BIS[]_CosmicRay_Thr[]
 
-3. Create new folder where you want output (i.e. in home directory) with naming scheme: Mod[]_Thr[]_PostCal<br/>
+Note:<br/> `analysis_functions.ipynb` has filtering functions and workshopping material for .py files<br/>
+`all_mods_functions.ipynb` has functions for creating summary histos of parameters for all modules <br/>
 
-4. In order, run pdf_maker.py, plots.py, stats.py from terminal with syntax: "python pdf_maker.py"
-
-Note:<br/> analysis_functions.ipynb has filtering functions and workshopping material for .py files<br/>
-all_mods_functions.ipynb has functions for creating summary histos of parameters for all modules
+Reminder for commiting changes: <br/>
+`git add <file(s)>` <br/>
+`git commit -m "commit message"` <br/>
+`git push origin main` <br/>
