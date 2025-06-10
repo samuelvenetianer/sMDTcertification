@@ -96,7 +96,7 @@ for i in range(1, pages+1):
             restart_counter+=1
         else:
             pass
-    new_image.save(t0_titled+"/"+"summary"+str(i)+".png")
+    new_image.save(t0_titled+"/"+"fitsummary"+str(i)+".png")
     print("page", i, "completed")
     iter+=img_per_page
 
@@ -109,7 +109,7 @@ img_to_cat=[]
 imgs= os.listdir(t0_titled)
 
 for i in imgs:
-    if "summary" in i:
+    if "fitsummary" in i:
         img_to_cat.append(i)
 img_to_cat=natsorted(img_to_cat)
 
