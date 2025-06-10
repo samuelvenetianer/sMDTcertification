@@ -32,7 +32,10 @@ for i in all_files_folders:
 
 # loop through folders and perform png extraction
 
-for j in folders:
+#re-order folders 
+sorted_folders=natsorted(folders)
+
+for j in sorted_folders:
 
     print("Searching through folder for "+ j)
     pngs=[]
