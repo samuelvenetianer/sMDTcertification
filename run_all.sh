@@ -60,5 +60,5 @@ else
     cp $txt_path .
 
     echo "zipping files!"
-    zip "${mod}${zip_ext}" all_spectra.pdf heatmaps.png hist.png stats.txt $txt_name
+    zip "${mod}${zip_ext}" all_spectra.pdf adc_spectra_raw.pdf heatmaps.png hist.png stats.txt $txt_name
 fi
