@@ -5,6 +5,8 @@ if [ -d "$1" ]; then
     if [ "$response" = "y" ]; then
         python pdf_maker.py $1
         echo "pdf_maker.py complete!"
+        python pdf_maker_raw.py $1
+        echo "pdf_maker_raw.py complete!"
         python plots.py $1
         echo "plots.py complete!"
         python stats.py $1
@@ -37,6 +39,8 @@ else
 
     python pdf_maker.py $1
     echo "pdf_maker.py complete!"
+    python pdf_maker_raw.py $1
+    echo "pdf_maker_raw.py complete!"
     python plots.py $1
     echo "plots.py complete!"
     python stats.py $1
