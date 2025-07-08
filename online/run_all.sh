@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#testing again
+
 if [ -d "$1" ]; then
     read -p "$1 does exist. Do you want to re-analyze the results? (y/n) " response
     if [ "$response" = "y" ]; then
