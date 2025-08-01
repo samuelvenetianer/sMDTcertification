@@ -5,7 +5,7 @@ import sys
 #user inputs
 run_folder=r"/net/ustc_01/users/lich/muon/results"
 run_file=sys.argv[1]+".txt"
-output_folder=r"/home/svenetia"+"/"+sys.argv[1]
+output_folder=r"/home/svenetia/sMDTcertification/output/indiv_chambers"+"/"+sys.argv[1]
 
 #Choose run of interest
 def calc_stats_txt(input_txt_folder,input_txt_file, output_txt_folder):

@@ -10,8 +10,8 @@ import sys
 
 base_folder = r"/net/ustc_01/users/lich/muon/results"
 t0_untitled = base_folder +"/"+sys.argv[1]                             # general results folder
-t0_titled = r"/home/svenetia"+"/"+sys.argv[1] 
-summary_folder = r"/home/svenetia"+"/"+sys.argv[1]
+t0_titled = r"/home/svenetia/sMDTcertification/output/indiv_chambers"+"/"+sys.argv[1] 
+summary_folder = r"/home/svenetia/sMDTcertification/output/indiv_chambers"+"/"+sys.argv[1]
 
 # base_folder = r"C:\Users\svene\OneDrive\Documents\Tufts\Research\qual"
 # t0_untitled = base_folder +"\\"+sys.argv[1]                                                               # general results folder

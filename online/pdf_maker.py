@@ -9,8 +9,8 @@ import sys
 #Specify paths
 
 t0_untitled = r"/net/ustc_01/users/lich/muon/results"+"/"+sys.argv[1]+"/"+"T0Fits" #folder with Chihao's T0 fits
-t0_titled = r"/home/svenetia"+"/"+sys.argv[1] #folder to save titled pngs & summary png pages
-summary_folder = r"/home/svenetia"+"/"+sys.argv[1] #folder to save scrollable pdf
+t0_titled = r"/home/svenetia/sMDTcertification/output/indiv_chambers"+"/"+sys.argv[1] #folder to save titled pngs & summary png pages
+summary_folder = r"/home/svenetia/sMDTcertification/output/indiv_chambers"+"/"+sys.argv[1] #folder to save scrollable pdf
 
 widths=[]
 heights=[]

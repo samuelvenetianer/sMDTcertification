@@ -2,7 +2,7 @@
 
 #testing again
 
-if [ -d "/home/svenetia/$1" ]; then
+if [ -d "/home/svenetia/sMDTcertification/output/indiv_chambers/$1" ]; then
     read -p "$1 does exist. Do you want to re-analyze the results? (y/n) " response
     if [ "$response" = "y" ]; then
         python pdf_maker.py $1
@@ -14,7 +14,7 @@ if [ -d "/home/svenetia/$1" ]; then
         python stats.py $1
         echo "stats.py complete!"
 
-        cd /home/svenetia/$1
+        cd /home/svenetia/sMDTcertification/output/indiv_chambers/$1
         mod=$1
         zip_ext=".zip"
         txt_ext=".txt"
@@ -35,7 +35,7 @@ if [ -d "/home/svenetia/$1" ]; then
         echo "That is not an option. Exiting now."
     fi
 else
-    mkdir /home/svenetia/$1
+    mkdir /home/svenetia/sMDTcertification/output/indiv_chambers/$1
     echo "new directory created!"
 
     python pdf_maker.py $1
@@ -47,7 +47,7 @@ else
     python stats.py $1
     echo "stats.py complete!"
 
-    cd /home/svenetia/$1
+    cd /home/svenetia/sMDTcertification/output/indiv_chambers/$1
     mod=$1
     zip_ext=".zip"
     txt_ext=".txt"

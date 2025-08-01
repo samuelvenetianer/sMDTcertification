@@ -10,7 +10,7 @@ import sys
 #user inputs
 run_folder=r"/net/ustc_01/users/lich/muon/results"
 run_file=sys.argv[1]+".txt"
-output_folder=r"/home/svenetia"+"/"+sys.argv[1]
+output_folder=r"/home/svenetia/sMDTcertification/output/indiv_chambers"+"/"+sys.argv[1]
 
 def summary_hist(input_folder, input_file, save_folder):
     df = pd.read_csv(input_folder+"/"+input_file, delimiter=",")
