@@ -1,0 +1,12 @@
+Root Mean Squared of T0[ns] is: 287.84643596718564
+Standard Deviation of T0[ns] is: 15.726631223901487
+Root Mean Squared of TMax[ns] is: 196.61341633255978
+Standard Deviation of TMax[ns] is: 7.600528757942266
+Root Mean Squared of ADC_peak[ns] is: 155.7840980093016
+Standard Deviation of ADC_peak[ns] is: 17.670273408171887
+Root Mean Squared of ADC_width[ns] is: 24.704478247773764
+Standard Deviation of ADC_width[ns] is: 3.0316387059215772
+Root Mean Squared of Resolution[um] is: 105.31525651676483
+Standard Deviation of Resolution[um] is: 8.356722962587876
+Root Mean Squared of Efficiency is: 0.9907410211069697
+Standard Deviation of Efficiency is: 0.004523797515401812

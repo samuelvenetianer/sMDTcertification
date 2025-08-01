@@ -37,7 +37,6 @@ if [ -d "/home/svenetia/$1" ]; then
 else
     mkdir /home/svenetia/$1
     echo "new directory created!"
-    #add check if directory created already and exit if so
 
     python pdf_maker.py $1
     echo "pdf_maker.py complete!"
@@ -54,7 +53,6 @@ else
     txt_ext=".txt"
     results_path="/net/ustc_01/users/lich/muon/results/"
     txt_path="${results_path}${mod}${txt_ext}"
-    # echo $txt_path
 
     txt_name="${mod}${txt_ext}"
 
