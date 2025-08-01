@@ -21,7 +21,7 @@ def all_tube_data(folder:str, extension:str, parameter:str):
     file_names=makelist(folder, extension)                                  # Create list of data files
     
     for i in file_names:                                                    # Loop through list of data files                                                 
-        df = pd.read_csv(folder+"\\"+i, delimiter=",")                      # Create dataframe for selected chamber from data file
+        df = pd.read_csv(folder+"/"+i, delimiter=",")                      # Create dataframe for selected chamber from data file
         df=df.loc[(df['Resolution[um]']>0) & (df['Efficiency']>0)]          # Select alive tubes only
         values=df[parameter].tolist()                                       # Create list of all values in dataframe of the variable of interest
         data+=values                                                        # Add values in list for this chamber to master list 

@@ -2,7 +2,7 @@
 import matplotlib.pyplot as plt
 from summary_func import *
 
-def make_hist(data, parameter:str, binning: int, rootmeansq:float, standarddev:float):
+def make_hist(data, parameter:str, binning: int, rootmeansq:float, standarddev:float, output_path:str):
     
         """
         Function creates a histogram using the data for a chosen parameter
@@ -27,7 +27,7 @@ def make_hist(data, parameter:str, binning: int, rootmeansq:float, standarddev:f
         elif parameter=="ADC_width[ns]":
                 title="ADCwidth"
         elif parameter=="Resolution[um]":
-                title="Resolution_test"
+                title="Resolution"
         elif parameter=="Efficiency":
                 title="Efficiency"
         fig,ax = plt.subplots()
@@ -39,7 +39,7 @@ def make_hist(data, parameter:str, binning: int, rootmeansq:float, standarddev:f
                 bbox = dict(facecolor = 'blue', alpha = .2))
         plt.text(.7, .75, std_string, transform = ax.transAxes,
                 bbox = dict(facecolor = 'blue', alpha = .2))
-        plt.savefig(r"C:\Users\svene\OneDrive\Documents\Tufts\Research\qual\functions\summary_plots"+"\\"+title+".png", bbox_inches="tight")
+        plt.savefig(output_path+"/"+ title+".png", bbox_inches="tight")
         plt.close()
 
 

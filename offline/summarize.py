@@ -10,15 +10,15 @@ from summary_func import *
 from summary_stats_func import *
 
 # define inputs
-path_to_files = r"C:\Users\svene\OneDrive\Documents\Tufts\Research\qual\eye_scanning\Cosmic_Data"
+path_to_files = "/net/ustc_01/users/lich/muon/results"
 extension_of_files = ".txt"
-output_path= r"C:\Users\svene\OneDrive\Documents\Tufts\Research\qual\functions\summary_plots"
+output_path= "/home/svenetia/sMDTcertification/output/summary"
 hist_bins=100
 
 # check if stats file exists
-exists=os.path.exists(output_path+"\\"+"stats.txt")
+exists=os.path.exists(output_path+"/"+"stats.txt")
 if exists==True:
-    os.remove(output_path+"\\"+"stats.txt")
+    os.remove(output_path+"/"+"stats.txt")
 
 # specify parameters of interest
 
@@ -35,4 +35,4 @@ for i in all_param:
     all_data = all_tube_data(path_to_files, extension_of_files, i)
     rms=calc_rms(all_data, i, output_path)
     stddev=calc_stddev(all_data, i, output_path)
-    histogram = make_hist(all_data, i, hist_bins, rms, stddev)
+    histogram = make_hist(all_data, i, hist_bins, rms, stddev, output_path)
