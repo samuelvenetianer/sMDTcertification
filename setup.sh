@@ -6,3 +6,8 @@ echo $Results_Dir
 echo 'Setting analysis directory...'
 Analysis_Dir=/home/svenetia/sMDTcertification/online
 echo $Analysis_Dir
+
+setupATLAS
+lsetup "root recommended"
+
+cd $Analysis_Dir
