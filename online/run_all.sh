@@ -9,10 +9,10 @@ if [ -d "/home/svenetia/sMDTcertification/output/indiv_chambers/$1" ]; then
         echo "pdf_maker.py complete!"
         python pdf_maker_raw.py $1
         echo "pdf_maker_raw.py complete!"
-        python plots.py $1
-        echo "plots.py complete!"
-        python stats.py $1
-        echo "stats.py complete!"
+        # python plots.py $1
+        # echo "plots.py complete!"
+        # python stats.py $1
+        # echo "stats.py complete!"
 
         cd /home/svenetia/sMDTcertification/output/indiv_chambers/$1
         mod=$1
@@ -28,7 +28,7 @@ if [ -d "/home/svenetia/sMDTcertification/output/indiv_chambers/$1" ]; then
         cp $txt_path .
 
         echo "zipping files!"
-        zip "${mod}${zip_ext}" all_spectra.pdf heatmaps.png hist.png stats.txt $txt_name
+        zip "${mod}${zip_ext}" all_spectra.pdf adc_spectra_raw.pdf heatmaps.png hist.png stats.txt $txt_name
     elif [ "$response" = "n" ]; then
         echo "OK, exiting now."
     else
@@ -42,10 +42,10 @@ else
     echo "pdf_maker.py complete!"
     python pdf_maker_raw.py $1
     echo "pdf_maker_raw.py complete!"
-    python plots.py $1
-    echo "plots.py complete!"
-    python stats.py $1
-    echo "stats.py complete!"
+    # python plots.py $1
+    # echo "plots.py complete!"
+    # python stats.py $1
+    # echo "stats.py complete!"
 
     cd /home/svenetia/sMDTcertification/output/indiv_chambers/$1
     mod=$1
@@ -56,8 +56,8 @@ else
 
     txt_name="${mod}${txt_ext}"
 
-    echo "copying text file!"
-    cp $txt_path .
+    # echo "copying text file!"
+    # cp $txt_path .
 
     echo "zipping files!"
     zip "${mod}${zip_ext}" all_spectra.pdf adc_spectra_raw.pdf heatmaps.png hist.png stats.txt $txt_name

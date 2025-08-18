@@ -3,7 +3,8 @@ import pandas as pd
 import sys
 
 #user inputs
-run_folder=r"/net/ustc_01/users/lich/muon/results"
+#run_folder=r"/net/ustc_01/users/lich/muon/results"
+run_folder=r"/home/svenetia/sMDTcertification/online" # Use when generating txt file (makeDB.py) in personal folder
 run_file=sys.argv[1]+".txt"
 output_folder=r"/home/svenetia/sMDTcertification/output/indiv_chambers"+"/"+sys.argv[1]
 

@@ -9,7 +9,7 @@ import sys
 #Specify paths
 
 base_folder = r"/net/ustc_01/users/lich/muon/results"
-t0_untitled = base_folder +"/"+sys.argv[1]                             # general results folder
+t0_untitled = base_folder +"/"+sys.argv[1]
 t0_titled = r"/home/svenetia/sMDTcertification/output/indiv_chambers"+"/"+sys.argv[1] 
 summary_folder = r"/home/svenetia/sMDTcertification/output/indiv_chambers"+"/"+sys.argv[1]
 
@@ -24,11 +24,14 @@ folders=[]
 
 # first, get list of folders and choose only tdc folders
 all_files_folders= os.listdir(t0_untitled)
+print("Searching for folders with spectra in: ", t0_untitled)
 
 # make list of only the folders that have spectra in them
 for i in all_files_folders:
     if "Time_Spectrum" in i:
         folders.append(i)
+
+print("Folders of interest: ", folders)
 
 # loop through folders and perform png extraction
 

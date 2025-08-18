@@ -20,6 +20,7 @@ iter=0
 
 #get list of files
 all_files= os.listdir(t0_untitled)
+print("Looking for pngs in: ", t0_untitled)
 
 #make list of only pngs
 for i in all_files:
